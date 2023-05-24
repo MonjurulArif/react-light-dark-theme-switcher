@@ -1,9 +1,9 @@
 import "./App.css";
-import { ThemeProvider, useTheme } from "./ThemeContext";
-import Switch from "./Switch";
+import { ThemeProvider, useThemeChanger } from "./ThemeContext";
+import Switch from "./Switch/Switch";
 
 const Title = ({ children }) => {
-  const { theme } = useTheme();
+  const { theme } = useThemeChanger();
   return (
     <h2
       style={{
@@ -16,7 +16,7 @@ const Title = ({ children }) => {
 };
 
 const Paragraph = ({ children }) => {
-  const { theme } = useTheme();
+  const { theme } = useThemeChanger();
   return (
     <p
       style={{
@@ -58,7 +58,7 @@ const Page = () => {
 };
 
 function App() {
-  const { theme } = useTheme();
+  const { theme } = useThemeChanger();
   return (
     <div
       className="App"
